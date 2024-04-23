@@ -1,0 +1,48 @@
+import logo from './logo.svg'
+import './App.css'
+import React, { MouseEvent } from 'react'
+
+function App() {
+  const fn = (event: MouseEvent<HTMLButtonElement>, name: string) => {
+    console.log('clicked', name)
+  }
+  const list = [
+    { username: 'jam1', age: 18 },
+    { username: 'jam2', age: 19 },
+    { username: 'jam3', age: 20 },
+  ]
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.tsx</code> and save to reload.
+        </p>
+        <ul>
+          {list.map(item => {
+            return <li key={item.username}>{item.age}</li>
+          })}
+        </ul>
+        <div>
+          <button
+            onClick={event => {
+              fn(event, 'jam')
+            }}
+          >
+            click
+          </button>
+        </div>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  )
+}
+
+export default App
