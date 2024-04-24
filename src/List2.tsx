@@ -3,13 +3,18 @@ import QuestionCard from './components/QuestionCard'
 import { produce } from 'immer'
 
 const List2: FC = () => {
+  // useEffect(() => {
+  //   console.log('加载AJAX请求')
+  // }, [])
   const [questionList, setQuestionList] = useState([
     { id: 'q1', title: '问卷1', isPublished: false },
     { id: 'q2', title: '问卷2', isPublished: false },
     { id: 'q3', title: '问卷3', isPublished: false },
     { id: 'q4', title: '问卷4', isPublished: true },
   ])
-
+  // useEffect(() => {
+  //   console.log('questionList changed')
+  // }, [questionList])
   const add = () => {
     const r = Math.random().toString().slice(-3)
     // setQuestionList(

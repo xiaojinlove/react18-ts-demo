@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, useEffect } from 'react'
 
 type PropsType = {
   id: string
@@ -15,6 +15,12 @@ const QuestionCard: FC<PropsType> = props => {
   const publish = (id: string) => {
     publishQuestion && publishQuestion(id)
   }
+  useEffect(() => {
+    console.log('question card mounted')
+    return () => {
+      console.log('question card unmounted')
+    }
+  }, [])
   return (
     <div key={id}>
       <strong>{title}</strong>
