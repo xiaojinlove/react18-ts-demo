@@ -1,5 +1,6 @@
 import React from 'react'
-import useMouse from './hooks/useMouse'
+//import useMouse from './hooks/useMouse'
+import useGetInfo from './hooks/useGetInfo'
 //import List1 from './List1'
 //import List2 from './List2'
 //import UseRefDemo from './UseRefDemo'
@@ -10,12 +11,12 @@ import useMouse from './hooks/useMouse'
 
 function App() {
   // useTitle('App page 1')
-  const { x, y } = useMouse()
+  // const { x, y } = useMouse()
+  const { loading, info } = useGetInfo()
   return (
     <>
-      <p>
-        App page {x} {y}
-      </p>
+      <p>App page</p>
+      <p>{loading ? '加载中...' : info}</p>
       {/* <List1 /> */}
       {/* <StateDemo1 /> */}
       {/* <StateDemo2 /> */}
