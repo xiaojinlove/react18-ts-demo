@@ -4,16 +4,22 @@ import React from 'react'
 //import UseRefDemo from './UseRefDemo'
 //import ImmerDemo from './ImmerDemo'
 //import UseMemoDemo from './UseMemoDemo'
-import UseCallbackDemo from './UseCallbackDemo'
+//import UseCallbackDemo from './UseCallbackDemo'
+import useTitle from './hooks/useTitle'
 
 function App() {
+  useTitle('App page 1')
   return (
     <>
-      {/* <ImmerDemo /> */}
+      <p>App page</p>
+      {/* <List1 /> */}
+      {/* <StateDemo1 /> */}
+      {/* <StateDemo2 /> */}
       {/* <List2 /> */}
+      {/* <ImmerDemo /> */}
       {/* <UseRefDemo /> */}
       {/* <UseMemoDemo /> */}
-      <UseCallbackDemo />
+      {/* <UseCallbackDemo /> */}
     </>
   )
 }
