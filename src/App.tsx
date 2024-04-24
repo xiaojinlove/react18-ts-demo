@@ -1,17 +1,21 @@
 import React from 'react'
+import useMouse from './hooks/useMouse'
 //import List1 from './List1'
 //import List2 from './List2'
 //import UseRefDemo from './UseRefDemo'
 //import ImmerDemo from './ImmerDemo'
 //import UseMemoDemo from './UseMemoDemo'
 //import UseCallbackDemo from './UseCallbackDemo'
-import useTitle from './hooks/useTitle'
+// import useTitle from './hooks/useTitle'
 
 function App() {
-  useTitle('App page 1')
+  // useTitle('App page 1')
+  const { x, y } = useMouse()
   return (
     <>
-      <p>App page</p>
+      <p>
+        App page {x} {y}
+      </p>
       {/* <List1 /> */}
       {/* <StateDemo1 /> */}
       {/* <StateDemo2 /> */}
