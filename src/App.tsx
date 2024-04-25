@@ -3,7 +3,8 @@ import React from 'react'
 //import useMouse from './hooks/useMouse'
 //import useGetInfo from './hooks/useGetInfo'
 //import List1 from './List1'
-import List2 from './List2'
+//import List2 from './List2'
+import StyledComponentDemo from './StyledComponentDemo'
 //import UseRefDemo from './UseRefDemo'
 //import ImmerDemo from './ImmerDemo'
 //import UseMemoDemo from './UseMemoDemo'
@@ -23,11 +24,12 @@ function App() {
       {/* <List1 /> */}
       {/* <StateDemo1 /> */}
       {/* <StateDemo2 /> */}
-      <List2 />
+      {/* <List2 /> */}
       {/* <ImmerDemo /> */}
       {/* <UseRefDemo /> */}
       {/* <UseMemoDemo /> */}
       {/* <UseCallbackDemo /> */}
+      <StyledComponentDemo />
     </>
   )
 }
