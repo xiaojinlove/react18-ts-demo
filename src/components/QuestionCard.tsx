@@ -1,6 +1,7 @@
 import React, { FC, useEffect } from 'react'
-import classnames from 'classnames'
-import './QuestionCard.css'
+//import classnames from 'classnames'
+//import './QuestionCard.css'
+import styles from './QuestionCard.module.css'
 
 type PropsType = {
   id: string
@@ -27,10 +28,10 @@ const QuestionCard: FC<PropsType> = props => {
   // let itemclassName = 'list-item'
   // if (isPublished === true) itemclassName += ' published'
 
-  const itemclassName = classnames('list-item', { published: isPublished })
+  //const itemclassName = classnames('list-item', { published: isPublished })
 
   return (
-    <div key={id} className={itemclassName}>
+    <div key={id} className={styles['list-item']}>
       <strong>{title}</strong>
       &nbsp;
       {/* 条件判断 */}
