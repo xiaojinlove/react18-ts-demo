@@ -1,4 +1,6 @@
 import React, { FC, useEffect } from 'react'
+import classnames from 'classnames'
+import './QuestionCard.css'
 
 type PropsType = {
   id: string
@@ -21,8 +23,14 @@ const QuestionCard: FC<PropsType> = props => {
       console.log('question card unmounted')
     }
   }, [])
+
+  // let itemclassName = 'list-item'
+  // if (isPublished === true) itemclassName += ' published'
+
+  const itemclassName = classnames('list-item', { published: isPublished })
+
   return (
-    <div key={id}>
+    <div key={id} className={itemclassName}>
       <strong>{title}</strong>
       &nbsp;
       {/* 条件判断 */}
