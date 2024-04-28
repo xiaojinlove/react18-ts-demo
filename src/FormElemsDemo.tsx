@@ -1,19 +1,27 @@
-import React, { ChangeEvent, FC, useState } from 'react'
+import React, { ChangeEvent, FC } from 'react'
 
+// {
+//   k1: v1,
+//   k2: v2,
+//   k3: v3
+// }
 const FormElemsDemo: FC = () => {
-  const [lang, setLang] = useState('js')
-  function handleChange(event: ChangeEvent<HTMLSelectElement>) {
-    setLang(event.target.value)
+  function handleSubmit(event: ChangeEvent<HTMLFormElement>) {
+    event.preventDefault() //阻止默认行为
+    //JS 自己提交数据
   }
   return (
     <>
       <p>form elems demo</p>
       <div>
-        <select value={lang} onChange={handleChange}>
-          <option value="java">Java</option>
-          <option value="js">JS</option>
-          <option value="css">CSS</option>
-        </select>
+        <form action="/api/post" onSubmit={handleSubmit}>
+          <input name="k1" value="v1" />
+          <br />
+          <textarea name="k2" value="v2" />
+          <br />
+          <input type="hidden" name="k3" value="v3" />
+          <button type="submit">提交</button>
+        </form>
       </div>
     </>
   )
