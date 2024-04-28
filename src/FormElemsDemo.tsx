@@ -1,21 +1,33 @@
 import React, { FC, useState, ChangeEvent } from 'react'
 
 const FormElemsDemo: FC = () => {
-  const [text, setText] = useState<string>('hello')
-  function handleChange(event: ChangeEvent<HTMLTextAreaElement>) {
-    setText(event.target.value)
-  }
-  function genHtml() {
-    return { __html: text.replaceAll('\n', '<br>') }
+  const [gender, setGender] = useState('male')
+  function handleChange(event: ChangeEvent<HTMLInputElement>) {
+    setGender(event.target.value)
   }
   return (
     <>
       <p>form elems demo</p>
       <div>
-        {/* <input value={text} onChange={handleChange} /> */}
-        <textarea value={text} onChange={handleChange}></textarea>
-        {/* {text.replaceAll('\n', '<br>')} */}
-        <p dangerouslySetInnerHTML={genHtml()}></p>
+        <label htmlFor="radio1">男</label>
+        <input
+          type="radio"
+          id="radio1"
+          name="gender"
+          value="male"
+          checked={gender === 'male'}
+          onChange={handleChange}
+        />
+        <label htmlFor="radio2">女</label>
+        <input
+          type="radio"
+          id="radio2"
+          name="gender"
+          value="female"
+          checked={gender === 'female'}
+          onChange={handleChange}
+        />
+        <button onClick={() => console.log(gender)}>print</button>
       </div>
     </>
   )
