@@ -1,5 +1,6 @@
 import React from 'react'
-import FormElemsDemo from './FormElemsDemo'
+import ReactHookFormDemo from './ReactHookFormDemo'
+//import FormElemsDemo from './FormElemsDemo'
 //import ClosureDemo from './ClosureTrap'
 //import useMouse from './hooks/useMouse'
 //import useGetInfo from './hooks/useGetInfo'
@@ -31,7 +32,8 @@ function App() {
       {/* <UseMemoDemo /> */}
       {/* <UseCallbackDemo /> */}
       {/* <StyledComponentDemo /> */}
-      <FormElemsDemo />
+      {/* <FormElemsDemo /> */}
+      <ReactHookFormDemo />
     </>
   )
 }
