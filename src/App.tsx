@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactHookFormDemo from './ReactHookFormDemo'
+// import ReactHookFormDemo from './ReactHookFormDemo'
 //import FormElemsDemo from './FormElemsDemo'
 //import ClosureDemo from './ClosureTrap'
 //import useMouse from './hooks/useMouse'
@@ -13,6 +13,7 @@ import ReactHookFormDemo from './ReactHookFormDemo'
 //import UseCallbackDemo from './UseCallbackDemo'
 // import useTitle from './hooks/useTitle'
 //import { useTitle } from 'ahooks'
+import ContextDemo from './ContextDemo'
 
 function App() {
   //useTitle('App page 1')
@@ -20,7 +21,7 @@ function App() {
   //const { loading, info } = useGetInfo()
   return (
     <>
-      <p>App page</p>
+      <h1>App page</h1>
       {/* <ClosureDemo /> */}
       {/* <p>{loading ? '加载中...' : info}</p> */}
       {/* <List1 /> */}
@@ -33,7 +34,8 @@ function App() {
       {/* <UseCallbackDemo /> */}
       {/* <StyledComponentDemo /> */}
       {/* <FormElemsDemo /> */}
-      <ReactHookFormDemo />
+      {/* <ReactHookFormDemo /> */}
+      <ContextDemo />
     </>
   )
 }
