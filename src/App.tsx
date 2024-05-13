@@ -1,4 +1,5 @@
 import React from 'react'
+import CountReducer from './CountReducer'
 // import ReactHookFormDemo from './ReactHookFormDemo'
 //import FormElemsDemo from './FormElemsDemo'
 //import ClosureDemo from './ClosureTrap'
@@ -13,7 +14,7 @@ import React from 'react'
 //import UseCallbackDemo from './UseCallbackDemo'
 // import useTitle from './hooks/useTitle'
 //import { useTitle } from 'ahooks'
-import ContextDemo from './ContextDemo'
+//import ContextDemo from './ContextDemo'
 
 function App() {
   //useTitle('App page 1')
@@ -35,7 +36,8 @@ function App() {
       {/* <StyledComponentDemo /> */}
       {/* <FormElemsDemo /> */}
       {/* <ReactHookFormDemo /> */}
-      <ContextDemo />
+      {/* <ContextDemo /> */}
+      <CountReducer />
     </>
   )
 }
