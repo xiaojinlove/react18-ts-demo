@@ -2,6 +2,7 @@ import type { TodoType } from './store'
 
 export type ActionType = {
   type: string
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   payload?: any //附加的内容（ 要新增的todo， 要删除的todoId ）
 }
 
