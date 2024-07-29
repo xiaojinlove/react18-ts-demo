@@ -16,8 +16,9 @@ import React from 'react'
 //import { useTitle } from 'ahooks'
 // import ContextDemo from './ContextDemo'
 // import Demo3 from './homePageDemo/Demo3'
-import TodoListPrac from './homePageDemo/TodoListPrac'
+// import TodoListPrac from './homePageDemo/TodoListPrac'
 // import TodoReducer from './TodoReducer'
+import TodoReducerPrac from './TodoReducerPrac'
 
 function App() {
   //useTitle('App page 1')
@@ -43,7 +44,8 @@ function App() {
       {/* <CountReducer /> */}
       {/* <TodoReducer /> */}
       {/* <Demo3 /> */}
-      <TodoListPrac />
+      {/* <TodoListPrac /> */}
+      <TodoReducerPrac />
     </>
   )
 }
