@@ -1,11 +1,11 @@
-import React, { FC, useState, ChangeEvent, useReducer } from 'react'
-import initialState from './store'
+import React, { FC, useState, ChangeEvent, useContext } from 'react'
 import { nanoid } from 'nanoid'
-import reducer from './reducer'
+import { TodoContext } from './index'
 
 const InputForm: FC = () => {
-  const [state, dispatch] = useReducer(reducer, initialState)
-
+  // const [state, dispatch] = useReducer(reducer, initialState)
+  const context = useContext(TodoContext)
+  const { state, dispatch } = context
   const [text, setText] = useState('')
   function handleChange(event: ChangeEvent<HTMLInputElement>) {
     setText(event.target.value)
