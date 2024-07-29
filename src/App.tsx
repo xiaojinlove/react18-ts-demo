@@ -14,8 +14,10 @@ import React from 'react'
 //import UseCallbackDemo from './UseCallbackDemo'
 // import useTitle from './hooks/useTitle'
 //import { useTitle } from 'ahooks'
-//import ContextDemo from './ContextDemo'
-import TodoReducer from './TodoReducer'
+// import ContextDemo from './ContextDemo'
+// import Demo3 from './homePageDemo/Demo3'
+import TodoListPrac from './homePageDemo/TodoListPrac'
+// import TodoReducer from './TodoReducer'
 
 function App() {
   //useTitle('App page 1')
@@ -39,7 +41,9 @@ function App() {
       {/* <ReactHookFormDemo /> */}
       {/* <ContextDemo /> */}
       {/* <CountReducer /> */}
-      <TodoReducer />
+      {/* <TodoReducer /> */}
+      {/* <Demo3 /> */}
+      <TodoListPrac />
     </>
   )
 }
